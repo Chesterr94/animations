@@ -1,0 +1,102 @@
+body{
+	background-image: url("/img/ozajz3ofw6r61.jpg");
+	background-size: 100%;
+}
+
+.container-1{
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+.block-green{
+  width: 900px;
+	height: 40px;
+	border: 2px solid green;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+
+.container-1 .block-green .line-green{
+	height: 40px;
+	border-radius: 20px;
+	background-color: green;
+	animation: loading 2s forwards cubic-bezier(0,0,0,0);
+}
+
+@keyframes loading{
+	0%{
+		width: 20%;
+	}
+
+	100%{
+		width: 90%;
+	}
+}
+
+
+.block-yellow{
+	width: 10%;
+	height: 50px;
+	background-color: yellow;
+	border-radius: 20px;
+	margin-bottom: 100px;
+	animation: loading-yellow 2s forwards cubic-bezier(0,0,0,0) infinite alternate;
+	animation-play-state: paused
+
+}
+
+@keyframes loading-yellow{
+	0%{
+		width: 20%;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+.block-yellow:hover{
+	animation-play-state: running;
+}
+
+.container-3{
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+.block-ball{
+	width: 300px;
+	height: 300px;
+	border: 2px solid blue;
+	margin: 0 auto;
+	position: relative;
+}
+
+.ball{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background-color: blue;
+	border-radius: 50%;
+	animation: ball 3s forwards linear infinite;
+}
+
+@keyframes ball{
+	0%{
+		bottom: 90%; left: 0;
+}
+
+	25%{bottom: 0; left: 20%;}
+
+	50%{bottom: 30%; left: 40%;}
+
+	70%{bottom: 0%; left: 60%;}
+
+	85%{bottom: 15%; left: 80%;}
+
+	100%{bottom: 0; left: 90%;}
+}
